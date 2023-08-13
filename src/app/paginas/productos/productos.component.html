@@ -1,0 +1,44 @@
+<div id="cuerpo">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Precio mínimo</th>
+        <th>Precio máximo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="number" min="2000" [(ngModel)]="from"></td>
+        <td><input type="number" min="2000" [(ngModel)]="to"></td>
+        <td align="center"><button class="btn btn-dark" (click)="buscar()">
+          Buscar
+        </button></td>
+        <td align="center"><button class="btn btn-info" (click)="limpiarBusqueda()">
+          Limpiar Búsqueda
+        </button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="table table-bordered">
+      <thead id="titulitos">
+        <tr>
+          <th>Id</th>
+          <th>Título</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+          <th>Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productosFiltrados.slice(paginator.pageIndex * paginator.pageSize, (paginator.pageIndex + 1) * paginator.pageSize)">
+          <td>{{ product.id }}</td>
+          <td>{{ product.title }}</td>
+          <td>{{ product.price }}€</td>
+          <td>{{ product.description }}</td>
+          <td><img [src]="product.images" [alt]="product.description" style="width: 300px; height: auto;" /></td>
+        </tr>
+      </tbody>
+  </table>
+  <mat-paginator [length]="productosFiltrados.length" [pageSize]="paginator.pageSize" [pageSizeOptions]="[10, 20, 50]" (page)="onPageChange($event)"></mat-paginator>
+</div>

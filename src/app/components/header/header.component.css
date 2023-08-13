@@ -1,0 +1,29 @@
+a {
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+#negro{
+  color:black;
+}
+
+.row {
+  padding: 2px;
+  color: white;
+}
+
+.container {
+  padding: 2px 8px;
+  text-align: center;
+
+}
+header {
+  background: #f7f7f7;
+  padding: 10px;
+}
+
+h5 {
+  margin: 0;
+  text-align: center;
+}
