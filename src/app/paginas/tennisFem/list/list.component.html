@@ -1,0 +1,37 @@
+<main>
+    <br>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <h1>Clasificación Femenina</h1>
+        </blockquote>
+    </figure>
+    <br />
+    <div class="button-container">
+        <a routerLink="/tennisFem" class="btn btn-outline-primary">Volver</a>
+    </div>
+
+    <table class="table table-bordered" *ngIf="entries.length > 0; else noEntriesBlock">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Nombre</th>
+                <th>Foto</th>
+                <th>País</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entry of entries">
+                <td>{{ entry.ranking }}</td>
+                <td>{{ entry.team.name }}</td>
+                <td><img [src]="entry.team.logo" alt="WTA" width="100" height="100"></td>
+                <td>{{ entry.team.country }}</td>
+                <td>{{ entry.points }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #noEntriesBlock>
+        <p>No entries available.</p>
+    </ng-template>
+</main>

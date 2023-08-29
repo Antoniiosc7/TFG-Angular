@@ -7,7 +7,7 @@ import { Product } from './models/producto.model'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TFGng';
+  title = 'TFG-Angular';
   http = inject(HttpClient);
 
   productos: Product[] = [];

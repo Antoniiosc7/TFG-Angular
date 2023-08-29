@@ -1,24 +1,45 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 <header>
-  <div class="container">
-      <div id="titulo">
-          <a routerLink=""><h2>INICIO</h2></a>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #cf2d2d;">
+    <div class="container">
+      <a class="navbar-brand" href="http://antoniosaborido.es">INICIO</a>
+      <button class="navbar-toggler" type="button" (click)="toggleDropdown()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" [ngClass]="{ 'show': isDropdownOpen }">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://antoniosaborido.es:8080" style="color: white;">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/twitch" style="color: white;">Twitch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tennisFem" style="color: white;">Top Tennis FEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tennisMasc" style="color: white;">Live Tennis Ranking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/product" style="color: white;">Productos</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">|</div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: white;" id="dropdownMenuButton" data-toggle="dropdown"
+              (click)="toggleDropdown()" (keydown)="handleDropdownKey($event)" tabindex="0">
+              Front-Ends
+            </a>
+            <div class="dropdown-menu custom-dropdown" [ngClass]="{ 'show': isDropdownOpen }" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" routerLink="/tennis" style="color: #cf2d2d;">Tennis</a>
+              <a class="dropdown-item" routerLink="/premier-league" style="color: #cf2d2d;">Premier-League</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#/Visualizaciones" style="color: white;">Visualizaciones</a>
+          </li>
+        </ul>
       </div>
-
-      <div class="row">
-          <div class="col-md">
-              <a routerLink="/about"><h5>About</h5></a>
-          </div>
-          <div class="col-md">
-            <a routerLink="/product"><h5>Productos</h5></a>
-          </div>
-          <div class="col-md">
-              <a routerLink="/tennis"><h5>Tennis</h5></a>
-          </div>
-          <div class="col-md">
-            <a routerLink="/twitch"><h5>Twitch</h5></a>
-        </div>
-      </div>
-  </div>
+    </div>
+  </nav>
 </header>

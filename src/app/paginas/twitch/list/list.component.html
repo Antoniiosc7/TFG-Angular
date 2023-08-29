@@ -1,0 +1,40 @@
+<main>
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <h1>Clips: Twitch</h1>
+      </blockquote>
+    </figure>
+  
+    <td align="center">
+      <a routerLink="/twitch" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Volver</a>
+    </td>
+    <br>
+  
+    <ng-container *ngIf="entries.length === 0; else content">
+      Loading...
+    </ng-container>
+  
+    <ng-template #content>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Numero de visitas</th>
+            <th>Clip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entry of entries">
+            <td>{{ entry.title }}</td>
+            <td>{{ entry.view_count }}</td>
+            <td>
+              <iframe [src]="'https://clips.twitch.tv/embed?clip=' + entry.id + '&parent=antoniosaborido.es'"
+                height="360" width="640" allowfullscreen title="Twitch Clip">
+              </iframe>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </main>
+  

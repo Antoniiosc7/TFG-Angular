@@ -1,0 +1,10 @@
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 7%;
+  }
+main{
+    padding-left: 20%;
+    padding-right: 20%;
+}

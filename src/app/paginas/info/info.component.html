@@ -1,0 +1,60 @@
+<br>
+<div class="container">
+    <div id="titulo">
+      <h3>TFG-Angular</h3>
+    </div>
+  
+    <h4>Descripción:</h4>
+    <ul>
+      <li>Relación de deportes entre fútbol (Premier League), tenis y baloncesto (NBA)</li>
+      <li>Visualizaciones de gráficas conjuntas a APIs propias editables en las páginas front-end</li>
+      <li>Integraciones de APIs externas junto a sus respectivas visualizaciones</li>
+    </ul>
+    <h4>Repositorio GitHub:</h4>
+    <ul>
+      <li><a href="https://github.com/Antoniiosc7/TFG-Angular">https://github.com/Antoniiosc7/TFG-Angular</a></li>
+    </ul>
+    <h4>Desplegado en:</h4>
+    <ul>
+      <li><a href="http://antoniosaborido.es:8080">http://antoniosaborido.es:8080</a></li>
+    </ul>
+  
+    <hr>
+  
+    <h4>Documentación APIs propias</h4>
+    <ul>
+      <li *ngFor="let api of apis"><a [href]="api.link">{{ api.name }}</a></li>
+    </ul>
+  
+    <h4>APIs</h4>
+    <ul>
+      <li *ngFor="let endpoint of apiEndpoints"><a [href]="endpoint.link">{{ endpoint.name }}</a></li>
+    </ul>
+  
+    <h4>Front-Ends propios</h4>
+    <ul>
+      <li *ngFor="let link of frontEndLinks"><a [href]="link.link">{{ link.name }}</a></li>
+    </ul>
+  
+    <hr>
+    <h4> APIs externas:</h4>
+    <h5> API Twitch</h5>
+    <li>Documentación: <a href="https://dev.twitch.tv/docs/api/">https://dev.twitch.tv/docs/api/</a></li>
+    <li><a href="/twitch">Implementación</a></li>
+    <br>
+    <h5> API Clasificacion ATP Actualizada</h5>
+    <li>Documentación: <a href="https://rapidapi.com/cantagalloedoardo/api/ultimate-tennis1/details">https://rapidapi.com/cantagalloedoardo/api/ultimate-tennis1/details</a></li>
+    <li><a href="tennisMasc">Implementación</a></li>
+    <br>
+    <h5> API Top Tennis Femenino</h5>
+    <li>Documentación: <a href="https://rapidapi.com/tipsters/api/sportscore1">https://rapidapi.com/tipsters/api/sportscore1</a></li>
+    <li><a href="/tennisFem">Implementación</a></li>
+    <br>   
+    <h5> API Productos</h5>
+    <li>Documentación: <a href="https://api.escuelajs.co/docs/">https://api.escuelajs.co/docs/</a></li>
+    <li><a href="/product">Implementación</a></li>
+
+
+  
+  </div>
+  

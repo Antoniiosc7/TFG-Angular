@@ -1,29 +1,56 @@
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 a {
-  color: black;
+  color: white;
+  text-decoration: none;
 }
+
+li {
+  text-emphasis-color: white;
+}
+
 a:hover {
-  color: blue;
-}
-#negro{
-  color:black;
+  color: #141414;
 }
 
 .row {
-  padding: 2px;
+  padding: 10px;
   color: white;
 }
 
 .container {
   padding: 2px 8px;
   text-align: center;
-
 }
+
 header {
-  background: #f7f7f7;
+  background: #cf2d2d;
   padding: 10px;
 }
 
-h5 {
-  margin: 0;
-  text-align: center;
+.dropdown-menu.show {
+  display: block;
+}
+
+.col.dropdown .dropdown-item {
+  color: rgb(0, 0, 0);
+}
+
+.col.dropdown .dropdown-item:hover {
+  background-color: #cf2d2d;
+}
+
+.dropdownMenuButton {
+  background-color: #cf2d2d;
+}
+
+.dropdown-menu.custom-dropdown {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item.active {
+  background-color: white;
 }

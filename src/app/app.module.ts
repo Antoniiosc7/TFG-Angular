@@ -17,7 +17,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 
 import { FormsModule } from '@angular/forms';
-import { TwitchComponent } from './paginas/twitch/twitch.component';
+import { TwitchHubComponent } from './paginas/twitch/twitch-hub/twitch-hub.component';
+import { InfoComponent } from './paginas/info/info.component';
+import { ListComponent } from './paginas/twitch/list/list.component';
+import { ChartComponent } from './paginas/twitch/chart/chart.component';
+import { HubFemComponent } from './paginas/tennisFem/hub/hub.component';
+import { ListFemComponent } from './paginas/tennisFem/list/list.component';
+import { ListMascComponent } from './paginas/tennisMasc/list/list.component';
+import { ChartMascComponent } from './paginas/tennisMasc/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,15 @@ import { TwitchComponent } from './paginas/twitch/twitch.component';
     AboutComponent,
     ProductosComponent,
     FooterComponent,
-    TwitchComponent,
+    TwitchHubComponent,
+    InfoComponent,
+    ListComponent,
+    ChartComponent,
+    HubFemComponent,
+    ListFemComponent,
+    ListMascComponent,
+    ChartMascComponent
+
 
   ],
   imports: [

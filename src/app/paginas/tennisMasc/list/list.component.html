@@ -1,0 +1,37 @@
+<main>
+    <br>
+    <div class="button-container">
+        <a href='\tennisMasc'> 
+      <button routerLink="/tennisMasc/" class="btn btn-outline-primary">Volver</button></a>
+    </div>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <h1>Clasificación tennis masculina</h1>
+        </blockquote>
+    </figure>
+
+    <ng-container *ngIf="entries; else loadingBlock">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let entry of entries">
+                    <td>{{ entry.Rank }}</td>
+                    <td>{{ entry.Name }}</td>
+                    <td>{{ entry.Age }}</td>
+                    <td>{{ entry.Points }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+
+    <ng-template #loadingBlock>
+        loading
+    </ng-template>
+</main>

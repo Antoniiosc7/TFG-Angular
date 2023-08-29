@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwitchComponent } from './twitch.component';
+import { HubFemComponent } from './hub.component';
 
-describe('TwitchComponent', () => {
-  let component: TwitchComponent;
-  let fixture: ComponentFixture<TwitchComponent>;
+describe('HubFemComponent', () => {
+  let component: HubFemComponent;
+  let fixture: ComponentFixture<HubFemComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TwitchComponent]
+      declarations: [HubFemComponent]
     });
-    fixture = TestBed.createComponent(TwitchComponent);
+    fixture = TestBed.createComponent(HubFemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
