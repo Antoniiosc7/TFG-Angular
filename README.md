@@ -1,28 +1,41 @@
-# TFGng
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # TFG-Angular
+
+## Descripción
+- Relación de deportes entre fútbol (Premier League), tenis y baloncesto (NBA)
+- Visualizaciones de gráficas conjuntas a APIs propias editables en las páginas front-end
+- Integraciones de APIs externas junto a sus respectivas visualizaciones
+
+## Repositorio GitHub
+- [Repositorio en GitHub](https://github.com/Antoniiosc7/TFG-Angular)
+
+## Desplegado en
+- [http://antoniosaborido.es:8081](http://antoniosaborido.es:8080)
+
+---
+
+## Documentación APIs propias
+- [API Tennis Documentación](https://www.postman.com/crimson-station-718549/workspace/tfg/documentation/26629937-bf224f9d-cdf1-486f-ae09-1ff7eaa290da?entity=&branch=&version=)
+- [API Premier-League Documentación](https://www.postman.com/crimson-station-718549/workspace/tfg/documentation/26629937-0e9f6df9-5922-40b3-a79e-b8d840f990df?entity=&branch=&version=)
+
+## APIs
+- [API Premier League](http://antoniosaborido.es/api/v2/premier-league)
+- [API Tennis](http://antoniosaborido.es/api/v2/tennis)
+
+## Front-Ends propios
+- [Tennis Frontend](http://antoniosaborido.es:8080/tennis)
+- [Premier-League Frontend](http://antoniosaborido.es:8080/premier-league)
+
+---
+
+## APIs externas
+### API Twitch
+- Documentación: [https://dev.twitch.tv/docs/api/](https://dev.twitch.tv/docs/api/)
+- [Implementación](http://antoniosaborido.es:8080/twitch)
+
+### API Clasificación ATP Actualizada
+- Documentación: [https://rapidapi.com/cantagalloedoardo/api/ultimate-tennis1/details](https://rapidapi.com/cantagalloedoardo/api/ultimate-tennis1/details)
+- [Implementación](http://antoniosaborido.es:8080/tennisMasc)
+
+### API Top Tennis Femenino
+- Documentación: [https://rapidapi.com/tipsters/api/sportscore1](https://rapidapi.com/tipsters/api/sportscore1)
+- [Implementación](http://antoniosaborido.es:8080/tennisFem)
