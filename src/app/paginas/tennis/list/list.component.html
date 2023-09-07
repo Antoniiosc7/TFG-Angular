@@ -1,0 +1,120 @@
+<main>
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <h1>TENNIS API</h1>
+      </blockquote>
+      <p>
+        Los últimos campeones de los grandes torneos del tenis internacional.
+      </p>
+    </figure>
+    <div *ngIf="checkMSG" class="alert alert-{{ color }}" role="alert">
+        {{ checkMSG }}
+      </div>
+      
+ 
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Fecha inicio</th>
+          <th>Fecha fin</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="number" min="2000" [(ngModel)]="from" /></td>
+          <td><input type="number" min="2000" [(ngModel)]="to" /></td>
+          <td align="center">
+            <button class="btn btn-outline-dark" (click)="searchEntries()">
+              Buscar
+            </button>
+          </td>
+          <td align="center">
+            <button class="btn btn-outline-info" (click)="clearSearch()">
+              Limpiar Búsqueda
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered">
+      <thead id="titulitos">
+        <tr>
+          <th>País</th>
+          <th>Año</th>
+          <th>Grand Slams Ganados</th>
+          <th>Masters 1000 Ganados</th>
+          <th>Medallas Olimpicas</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input [(ngModel)]="newEntry.country" /></td>
+          <td><input type="number" [(ngModel)]="newEntry.year" /></td>
+          <td><input [(ngModel)]="newEntry.most_grand_slam" /></td>
+          <td><input [(ngModel)]="newEntry.masters_finals" /></td>
+          <td><input [(ngModel)]="newEntry.olympic_gold_medals" /></td>
+          <td>
+            <button class="btn btn-outline-primary" (click)="insertEntry()">
+              Añadir
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let entry of entries">
+          <td>{{ entry.country }}</td>
+          <td>{{ entry.year }}</td>
+          <td>{{ entry.most_grand_slam }}</td>
+          <td>{{ entry.masters_finals }}</td>
+          <td>{{ entry.olympic_gold_medals }}</td>
+          <td>
+            <button class="btn btn-outline-danger" (click)="deleteEntry(entry.country, entry.year)">
+              Borrar
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-outline-success" (click)="loadInitialData()">
+              Cargar datos
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-outline-danger" (click)="deleteAllEntries()">
+              Borrar todo
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-success" (click)="loadInitialData()">
+      Cargar datos iniciales
+    </button>
+    <button class="btn btn-danger" (click)="deleteAllEntries()">
+      Eliminar todo
+    </button>
+    <button class="btn btn-info" (click)="navigateToChart1()">
+      Gráfica
+    </button>
+    <button class="btn btn-info" (click)="navigateToChart2()">
+      Gráfica2
+    </button>
+    <!-- Usando ngFor para generar botones de páginas -->
+<div align="center">
+    <button
+      outline
+      color="secondary"
+      *ngFor="let page of maxPagesArray; let i = index"
+      (click)="updatePage(i)"
+    >
+      {{ i }}
+    </button>
+    <button outline color="secondary" (click)="getEntries()">
+      Actualizar nº de página
+    </button>
+  </div>
+  
+  </main>
+  

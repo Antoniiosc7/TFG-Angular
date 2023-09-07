@@ -1,3 +1,3 @@
 #!/bin/bash
 
-nohup ng serve --host 192.168.1.36 --port 8080 &
+nohup ng serve --host 192.168.1.34 --port 8080 &

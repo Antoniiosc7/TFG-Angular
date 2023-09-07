@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -26,6 +27,12 @@ import { ListFemComponent } from './paginas/tennisFem/list/list.component';
 import { ListMascComponent } from './paginas/tennisMasc/list/list.component';
 import { ChartMascComponent } from './paginas/tennisMasc/chart/chart.component';
 
+import { TennisListComponent } from './paginas/tennis/list/list.component';
+import { TennisChart1Component } from './paginas/tennis/chart1/chart1.component';
+import { TennisChart2Component } from './paginas/tennis/chart2/chart2.component';
+import { PremierEditComponent } from './paginas/premier/edit/edit.component';
+import { VisualizacionesComponent } from './paginas/visualizaciones/visualizaciones.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +48,13 @@ import { ChartMascComponent } from './paginas/tennisMasc/chart/chart.component';
     HubFemComponent,
     ListFemComponent,
     ListMascComponent,
-    ChartMascComponent
+    ChartMascComponent,
+    TennisListComponent,
+    TennisChart1Component,
+    TennisChart2Component,
+    PremierEditComponent,
+    VisualizacionesComponent,
+
 
 
   ],
@@ -52,7 +65,8 @@ import { ChartMascComponent } from './paginas/tennisMasc/chart/chart.component';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
