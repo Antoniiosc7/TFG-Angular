@@ -1,4 +1,4 @@
-FROM node:16-alpine AS build
+FROM node:18.10 AS build
 
 WORKDIR /app
 
@@ -13,3 +13,5 @@ RUN npm run build
 EXPOSE 4200
 
 CMD ["npm", "start"]
+
+#CMD ["nohup", "ng", "serve", "--host", "192.168.0.104", "--port", "4200", "&"]
